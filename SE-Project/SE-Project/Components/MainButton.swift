@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomePageButton: View {
+struct MainButton: View {
     var text : String
     var background: Color = Color("AccentColor")
     
@@ -24,7 +24,7 @@ struct WelcomePageButton: View {
 
 struct WelcomePageButton_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomePageButton(text: "Press to continue")
+        MainButton(text: "Press to continue")
     }
 }
 
