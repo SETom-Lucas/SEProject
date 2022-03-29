@@ -28,13 +28,13 @@ struct ContentView: View {
                 Text("Are you ready to play ?")
                     .foregroundColor(.white)
                 
-                WelcomePageButton(text:"Press to continue")
+                Button("Click me", action: {
+                    let data = DataLoader().userData
+                    print(data)
+                })
                 
             }
-            
-       
         }
-        
     }
 }
 
