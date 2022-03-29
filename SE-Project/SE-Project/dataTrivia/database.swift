@@ -10,13 +10,12 @@ import Foundation
 
 struct Questions : Codable {
     var questionText:String
-    var correctAnswer:Answers
-    var incorrectAnswers:[Answers]
+    var Answers:[Answers]
 }
 
 struct Answers : Codable {
     var id : Int
-    var text :AttributedString
+    var text : String
     var isCorrect :Bool
 
 }

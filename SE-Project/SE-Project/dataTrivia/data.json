@@ -1,28 +1,27 @@
 [
     {
         "questionText":"Who is the Head porfessor in the Binfo course?",
-        "correctAnswer":
+        "Answers":[
             {
                 "id": 1,
-                "awnserText":"Volker Muller",
+                "text":"Volker Muller",
                 "isCorrect":true
-            },
-        "incorrectAnswers":[
+                },
             {
                 "id":2,
-                "awnserText":"Jeffery Epstien",
+                "text":"Jeffery Epstien",
                 "isCorrect":false
 
             },
             {
                 "id":3,
-                "awnserText":"Stephen Rothkugel",
+                "text":"Stephen Rothkugel",
                 "isCorrect":false
 
             },
             {
                 "id":4,
-                "awnserText":"Christophe shommer",
+                "text":"Christophe shommer",
                 "isCorrect":false
 
             }
@@ -30,27 +29,27 @@
     },
     {
         "questionText":"What is the full name of the Binfo course?",
-        "correctAnswer": {
-            "id":5,
-            "awnserText":"Bachelor in applied information technology",
-            "isCorrect":true
-            },
-        "incorrectAnswers":[
+        "Answers":[
+            {
+                "id":5,
+                "text":"Bachelor in applied information technology",
+                "isCorrect":true
+                },
             {
                 "id":6,
-                "awnserText":"Bachelors in informative journalism",
+                "text":"Bachelors in informative journalism",
                 "isCorrect":false
 
             },
             {
                 "id":7,
-                "awnserText":"Bachelors in biology",
+                "text":"Bachelors in biology",
                 "isCorrect":false
 
             },
             {
                 "id":8,
-                "awnserText":"Masters in applied information technology",
+                "text":"Masters in applied information technology",
                 "isCorrect":false
 
             }
@@ -58,27 +57,27 @@
     },
     {
         "questionText":"What does the FSTM stand for?",
-        "correctAnswer": {
-            "id":9,
-            "awnserText":"Faculty of Science, Technology and Medicine",
-            "isCorrect":true
-            },
-        "incorrectAnswers":[
+        "Answers":[
+            {
+                "id":9,
+                "text":"Faculty of Science, Technology and Medicine",
+                "isCorrect":true
+                },
             {
                 "id":10,
-                "awnserText":"Factory Security, Tech Mediators",
+                "text":"Factory Security, Tech Mediators",
                 "isCorrect":false
 
             },
             {
                 "id":11,
-                "awnserText":"Fear Science, Technology and Medicine",
+                "text":"Fear Science, Technology and Medicine",
                 "isCorrect":false
 
             },
             {
                 "id":12,
-                "awnserText":"Force Science To Murder",
+                "text":"Force Science To Murder",
                 "isCorrect":false
 
             }

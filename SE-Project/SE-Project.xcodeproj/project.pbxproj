@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		099F1A5E27F39209002A584A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = CAD59B9427F3879000155AEA /* data.json */; };
 		CA1B321827EA6EC200F81992 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B321727EA6EC200F81992 /* ProgressBar.swift */; };
 		CA1B321A27EA871000F81992 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B321927EA871000F81992 /* QuestionView.swift */; };
 		CA2F8EB427E90C8400CC2399 /* SE_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F8EB327E90C8400CC2399 /* SE_ProjectApp.swift */; };
@@ -76,8 +77,8 @@
 		CA2F8EB227E90C8400CC2399 /* SE-Project */ = {
 			isa = PBXGroup;
 			children = (
-				CAD59B8F27F3876A00155AEA /* dataTrivia */,
 				CA2F8EB327E90C8400CC2399 /* SE_ProjectApp.swift */,
+				CAD59B8F27F3876A00155AEA /* dataTrivia */,
 				CA2F8EDD27E913E600CC2399 /* Components */,
 				CA1B321627E91E3A00F81992 /* Views */,
 				CA2F8EB727E90C8400CC2399 /* Assets.xcassets */,
@@ -172,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				099F1A5E27F39209002A584A /* data.json in Resources */,
 				CA2F8EBB27E90C8400CC2399 /* Preview Assets.xcassets in Resources */,
 				CA2F8EB827E90C8400CC2399 /* Assets.xcassets in Resources */,
 			);

@@ -34,8 +34,16 @@ struct ContentView: View {
                     }label: {
                         MainButton(text:"Press to continue")
                     }
+                    Button("Clickme", action:{
+                        let data = DataLoader();
+                        print(data.userData)
+                    })
                     
-                    
+                    Button("Clickme", action:{
+                        let data = DataLoader();
+                        let data1 = data.userData.shuffled()
+                        print(data1)
+                    })
                 }
             }
         }
