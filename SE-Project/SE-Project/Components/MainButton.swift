@@ -22,7 +22,7 @@ struct MainButton: View {
     }
 }
 
-struct WelcomePageButton_Previews: PreviewProvider {
+struct MainButton_Previews: PreviewProvider {
     static var previews: some View {
         MainButton(text: "Press to continue")
     }
