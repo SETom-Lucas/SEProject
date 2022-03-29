@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswersUI: View {
   
-    var answer: Answer
+    var answer: Answers
     //Create a state that implement an action when the user select an answer.
     @State private var isSelected = false
     var green = Color(hue: 0.3417, saturation: 0.9, brightness: 0.8)
@@ -47,6 +47,6 @@ struct AnswersUI: View {
 
 struct AnswersUI_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersUI(answer: Answer(text: "Hello this is an answer", isCorrect: true))
+        AnswersUI(answer: Answers(text: "Hello this is an answer", isCorrect: true))
     }
 }

@@ -9,27 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Color("AccentColor")
-                .ignoresSafeArea()
-            Circle()
-                .scale(1.7)
-                .foregroundColor(.white)
-            Circle()
-                .scale(1.2)
-                .foregroundColor(.red)
-            
-            VStack(spacing : 25) {
-                Text("Welcome to FSTM QUIZZ")
-                    .font(.title)
-                    .fontWeight(.heavy)
+        NavigationView {
+            ZStack {
+                Color("AccentColor")
+                    .ignoresSafeArea()
+                Circle()
+                    .scale(1.7)
                     .foregroundColor(.white)
+                Circle()
+                    .scale(1.2)
+                    .foregroundColor(.red)
                 
-                Text("Are you ready to play ?")
-                    .foregroundColor(.white)
-                
-                MainButton(text:"Press to continue")
-                
+                VStack(spacing : 25) {
+                    Text("Welcome to FSTM QUIZZ")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                    
+                    Text("Are you ready to play ?")
+                        .foregroundColor(.white)
+                   
+                    NavigationLink{
+                        TriviaGameModeView()
+                    }label: {
+                        MainButton(text:"Press to continue")
+                    }
+                    
+                    
+                }
             }
         }
     }

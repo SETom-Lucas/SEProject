@@ -28,11 +28,20 @@ struct QuestionView: View {
                     .font(.system(size: 15))
                     .bold()
                     .foregroundColor(Color("DarkBlue"))
+                
+                AnswersUI(answer: Answers(text: "If you click here you're right !", isCorrect: true))
+                AnswersUI(answer: Answers(text: "If you click here you're wrong !", isCorrect: false))
+                
             }
+            
+            MainButton(text: "Next question")
+            
+            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("Background"))
+        .navigationBarHidden(true)
         
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 //Each answer can be unically identify by an ID thanks to Identifiable.
-struct Answer: Identifiable {
+struct Answers: Identifiable {
     //Random id generator from Swift.
     var id = UUID()
     var text : AttributedString
