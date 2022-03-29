@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CA1B321827EA6EC200F81992 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B321727EA6EC200F81992 /* ProgressBar.swift */; };
 		CA1B321A27EA871000F81992 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B321927EA871000F81992 /* QuestionView.swift */; };
-		CA1B321E27EBD22500F81992 /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1B321D27EBD22500F81992 /* Answers.swift */; };
 		CA2F8EB427E90C8400CC2399 /* SE_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F8EB327E90C8400CC2399 /* SE_ProjectApp.swift */; };
 		CA2F8EB627E90C8400CC2399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F8EB527E90C8400CC2399 /* ContentView.swift */; };
 		CA2F8EB827E90C8400CC2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2F8EB727E90C8400CC2399 /* Assets.xcassets */; };
@@ -24,7 +23,6 @@
 /* Begin PBXFileReference section */
 		CA1B321727EA6EC200F81992 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		CA1B321927EA871000F81992 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
-		CA1B321D27EBD22500F81992 /* Answers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answers.swift; sourceTree = "<group>"; };
 		CA2F8EB027E90C8400CC2399 /* SE-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SE-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2F8EB327E90C8400CC2399 /* SE_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SE_ProjectApp.swift; sourceTree = "<group>"; };
 		CA2F8EB527E90C8400CC2399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,14 +57,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CA1B321C27EBD1BC00F81992 /* Trivia */ = {
-			isa = PBXGroup;
-			children = (
-				CA1B321D27EBD22500F81992 /* Answers.swift */,
-			);
-			path = Trivia;
-			sourceTree = "<group>";
-		};
 		CA2F8EA727E90C8400CC2399 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +79,6 @@
 				CAD59B8F27F3876A00155AEA /* dataTrivia */,
 				CA2F8EB327E90C8400CC2399 /* SE_ProjectApp.swift */,
 				CA2F8EDD27E913E600CC2399 /* Components */,
-				CA1B321C27EBD1BC00F81992 /* Trivia */,
 				CA1B321627E91E3A00F81992 /* Views */,
 				CA2F8EB727E90C8400CC2399 /* Assets.xcassets */,
 				CA2F8EB927E90C8400CC2399 /* Preview Content */,
@@ -196,7 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1B321A27EA871000F81992 /* QuestionView.swift in Sources */,
-				CA1B321E27EBD22500F81992 /* Answers.swift in Sources */,
 				CA2F8EB627E90C8400CC2399 /* ContentView.swift in Sources */,
 				CA2F8EE127E917F400CC2399 /* MainButton.swift in Sources */,
 				CAD59B8C27F3698F00155AEA /* TriviaGameModeView.swift in Sources */,

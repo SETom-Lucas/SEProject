@@ -47,6 +47,6 @@ struct AnswersUI: View {
 
 struct AnswersUI_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersUI(answer: Answers(text: "Hello this is an answer", isCorrect: true))
+        AnswersUI(answer: Answers(id: 0, text: "Hello this is an answer", isCorrect: true))
     }
 }

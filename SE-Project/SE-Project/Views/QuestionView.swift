@@ -29,8 +29,8 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(Color("DarkBlue"))
                 
-                AnswersUI(answer: Answers(text: "If you click here you're right !", isCorrect: true))
-                AnswersUI(answer: Answers(text: "If you click here you're wrong !", isCorrect: false))
+                AnswersUI(answer: Answers(id: 0, text: "If you click here you're right !", isCorrect: true))
+                AnswersUI(answer: Answers(id: 0, text: "If you click here you're wrong !", isCorrect: false))
                 
             }
             
