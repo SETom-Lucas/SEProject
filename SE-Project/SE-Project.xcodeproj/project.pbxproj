@@ -76,8 +76,8 @@
 		CA2F8EB227E90C8400CC2399 /* SE-Project */ = {
 			isa = PBXGroup;
 			children = (
-				CAD59B8F27F3876A00155AEA /* dataTrivia */,
 				CA2F8EB327E90C8400CC2399 /* SE_ProjectApp.swift */,
+				CAD59B8F27F3876A00155AEA /* DataTrivia */,
 				CA2F8EDD27E913E600CC2399 /* Components */,
 				CA1B321627E91E3A00F81992 /* Views */,
 				CA2F8EB727E90C8400CC2399 /* Assets.xcassets */,
@@ -104,14 +104,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		CAD59B8F27F3876A00155AEA /* dataTrivia */ = {
+		CAD59B8F27F3876A00155AEA /* DataTrivia */ = {
 			isa = PBXGroup;
 			children = (
 				CAD59B9427F3879000155AEA /* data.json */,
 				CAD59B9227F3878E00155AEA /* database.swift */,
 				CAD59B9027F3878700155AEA /* DataLoader.swift */,
 			);
-			path = dataTrivia;
+			path = DataTrivia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
