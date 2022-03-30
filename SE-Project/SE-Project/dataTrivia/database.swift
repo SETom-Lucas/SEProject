@@ -13,6 +13,8 @@ struct Questions : Codable {
     var Answers:[Answers]
 }
 
+var DefaultQuestion = Questions(questionText: "", Answers: [])
+
 struct Answers : Codable {
     var id : Int
     var text : String

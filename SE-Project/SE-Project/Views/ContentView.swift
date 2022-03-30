@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
+            let data = DataLoader();
             ZStack {
                 Color("AccentColor")
                     .ignoresSafeArea()
@@ -34,15 +35,12 @@ struct ContentView: View {
                     }label: {
                         MainButton(text:"Press to continue")
                     }
-                    Button("Clickme", action:{
-                        let data = DataLoader();
-                        print(data.userData)
-                    })
                     
                     Button("Clickme", action:{
-                        let data = DataLoader();
-                        let data1 = data.userData.shuffled()
-                        print(data1)
+                        data.selectQuestion()
+                        print(data.currentQuestion.questionText)
+
+                        
                     })
                 }
             }

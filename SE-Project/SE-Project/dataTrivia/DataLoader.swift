@@ -9,7 +9,11 @@ import Foundation
 
 public class DataLoader {
     
-    @Published var userData = [Questions]()
+    @Published var questionList = [Questions]()
+    @Published private(set) var length = 0
+    @Published private(set) var index = 0
+    @Published var currentQuestion =  DefaultQuestion
+    
     
     init(){
         loading()
@@ -24,19 +28,24 @@ public class DataLoader {
                 do{
                     let data = try Data(contentsOf: url)
                     let jsonDecoder = JSONDecoder()
+                    var dataFromJson = try jsonDecoder.decode([Questions].self, from: data)
+                    dataFromJson.shuffle()
                     
-                    let dataFromJson = try jsonDecoder.decode([Questions].self, from: data)
-                    
-                    self.userData = dataFromJson
-                    
+                    self.questionList = dataFromJson
+                    self.length = questionList.count
                     
                 }
                 catch{
                     print(error)
                 }
             }
-        
-    
- 
+    func selectQuestion() {
+        if index < length {
+            currentQuestion = questionList[index]
+            index = index + 1
+        } else {
+            print("HAHAH sucks to suck")
+            }
+    }
 }
 
