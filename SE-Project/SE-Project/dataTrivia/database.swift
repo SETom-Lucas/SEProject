@@ -16,7 +16,7 @@ struct Questions : Codable {
 
 struct Answers : Codable {
     var id : Int
-    var text :AttributedString
+    var text :String
     var isCorrect :Bool
 
 }

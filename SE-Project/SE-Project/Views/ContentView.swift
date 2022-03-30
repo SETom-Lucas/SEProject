@@ -18,26 +18,28 @@ struct ContentView: View {
                     .foregroundColor(.white)
                 Circle()
                     .scale(1.2)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color("Red"))
                 
-                VStack(spacing : 25) {
+                VStack(spacing : 30) {
                     Text("Welcome to FSTM QUIZZ")
                         .font(.title)
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
+                        .padding()
                     
-                    Text("Are you ready to play ?")
-                        .foregroundColor(.white)
-                   
                     NavigationLink{
                         TriviaGameModeView()
                     }label: {
                         MainButton(text:"Press to continue")
                     }
-                    
-                    
+                    NavigationLink{
+                        SeeMoreView()
+                    }label: {
+                        SeeMoreButton(text:Text(Image(systemName: "book.fill")) + Text(" See More"))
+                    }
                 }
             }
+            
         }
     }
 }
