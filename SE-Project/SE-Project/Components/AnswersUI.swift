@@ -34,11 +34,11 @@ struct AnswersUI: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         //Changing the color of the others answers when the user select an answer.
-        .foregroundColor(isSelected ? Color("AccentColor") : .gray)
+        .foregroundColor(isSelected ? Color("AccentColor") : Color("Grey"))
         .background(.white)
         .cornerRadius(25)
         //Changing the color of the shadows when the answer is true/false.
-        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray, radius: 8, x: 0.5, y: 0.5)
+        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : Color("Grey"), radius: 8, x: 0.5, y: 0.5)
         .onTapGesture {
             isSelected = true
         }
