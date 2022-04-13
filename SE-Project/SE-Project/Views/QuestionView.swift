@@ -14,20 +14,20 @@ struct QuestionView: View {
                 Text("Questions Game")
                     .font(.title)
                     .fontWeight(.heavy)
-                    .foregroundColor(Color("AccentColor"))
+                    .foregroundColor(Color("Red"))
                 Spacer()
                 
                 Text("1 out of ...")
                     .fontWeight(.heavy)
-                    .foregroundColor(Color("AccentColor"))
+                    .foregroundColor(Color("Red"))
             }
             ProgressBar(widht: 350, height: 20, percent: 66, firstColor: Color("DarkBlue"), secondColor: Color("AccentColor"))
             
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: 25) {
                 Text("Hello I'm a SIMPLE test example I'm useless...")
-                    .font(.system(size: 15))
+                    .font(.system(size: 20))
                     .bold()
-                    .foregroundColor(Color("DarkBlue"))
+                    .foregroundColor(Color("AccentColor"))
                 
                 AnswersUI(answer: Answers(id: 0, text: "If you click here you're right !", isCorrect: true))
                 AnswersUI(answer: Answers(id: 0, text: "If you click here you're wrong !", isCorrect: false))
@@ -40,8 +40,8 @@ struct QuestionView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("Background"))
-        .navigationBarHidden(true)
+        //.background(Color("White"))
+        //.navigationBarHidden(true)
         
     }
 }
