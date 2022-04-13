@@ -1,6 +1,7 @@
 [
     {
         "questionText":"Who is the Head porfessor in the Binfo course?",
+        "img":"VolkerMuller",
         "Answers":[
             {
                 "id": 1,

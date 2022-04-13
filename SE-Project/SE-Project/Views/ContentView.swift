@@ -35,11 +35,11 @@ struct ContentView: View {
                     }label: {
                         MainButton(text:"Press to continue")
                     }
-                    
+                    //Button for testing database things
                     Button("Clickme", action:{
                         data.selectQuestion()
                         print(data.currentQuestion.questionText)
-
+                        print(data.currentQuestion.img)
                         
                     })
                 }
