@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
+            let data = DataLoader();
             ZStack {
                 Color("AccentColor")
                     .ignoresSafeArea()
@@ -32,6 +33,7 @@ struct ContentView: View {
                     }label: {
                         MainButton(text:"Press to continue")
                     }
+
                     NavigationLink{
                         SeeMoreView()
                     }label: {
