@@ -5,11 +5,11 @@
 
 **Members : Tom Leonard, Lucas Villiere**
 
-##Content
+## Content
 
 We decided to have this meeting to make a summary of our progress so far during the first sprint. Considering that we do most of our communication in regards of the project informally over Discord we thought it would be a good idea to formalise our progress
 
-##Progress
+## Progress
 
 - Implementation of a small prototype Json database containing the questions and answers for the quiz. This database architecture was modified and refined, and may be subject to further modification down the road. For now there are only 3 questions, but once we are happy with the software implementation, we shall expand it to contain more questions and answers.
 
