@@ -46,6 +46,7 @@ public class DataLoader {
         if index < length {
             currentQuestion = questionList[index]
             index = index + 1
+            print(currentQuestion.questionText)
         } else {
             print("There are no more questions ! the quizz is over")
             }
