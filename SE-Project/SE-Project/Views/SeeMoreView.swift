@@ -39,7 +39,7 @@ struct SeeMoreView: View {
                                 .font(.largeTitle)
                         }
               
-                        Link(destination: URL(string: "https://github.com/leonard-tom")!)
+                        Link(destination: URL(string: "https://twitter.com/uni_lu")!)
                         {
                             Image("Twitter")
                                 .resizable()
