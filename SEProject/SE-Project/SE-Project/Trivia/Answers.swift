@@ -1,0 +1,14 @@
+//
+//  Answers.swift
+//  SE-Project
+//
+//  Created by Lucas Villiere on 23/03/2022.
+//
+//
+//import Foundation
+
+////Each answer can be unically identify by an ID thanks to Identifiable.
+//struct Answers: Identifiable {
+//    //Random id generator from Swift.
+//
+//}
