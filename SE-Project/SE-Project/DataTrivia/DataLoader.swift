@@ -6,7 +6,7 @@
 
 
 import Foundation
-
+import SwiftUI
 //DataLoader is used to load the the questions in our jason file then parsing them as readable swift code that we can use in the rest of the application.
 
 public class DataLoader {
@@ -15,6 +15,12 @@ public class DataLoader {
     @Published private(set) var length = 0
     @Published private(set) var index = 0
     @Published var currentQuestion = DefaultQuestion
+    @Published private(set) var question: String = ""
+    @Published private(set) var answerChoices: [Answers] = []
+    @Published private(set) var reachedEnd = false
+    @Published private(set) var answerSelected = false
+    @Published private(set) var score = 0
+    @Published private(set) var progress: CGFloat = 0.00
     
     
     init(){
@@ -43,13 +49,26 @@ public class DataLoader {
     
     //Function to select the next question in the quizz
     func selectQuestion() {
+        answerSelected = false
+        progress = CGFloat(Double(index + 1) / Double(length) * 350)
+        
         if index < length {
             currentQuestion = questionList[index]
             index = index + 1
-            print(currentQuestion.questionText)
+            //print(currentQuestion.questionText)
+            question = currentQuestion.questionText
+            answerChoices = currentQuestion.Answers
         } else {
-            print("There are no more questions ! the quizz is over")
+            reachedEnd = true
+            //print("There are no more questions ! the quizz is over")
             }
+    }
+    
+    func selectAnswer(answer : Answers){
+        answerSelected = true
+        if answer.isCorrect {
+            score += 1
+        }
     }
 }
 
