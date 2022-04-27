@@ -14,10 +14,19 @@ struct TriviaGameModeView: View {
             VStack(alignment: .center, spacing: 20){
                 Text("FSTM Triva Game")
                     .font(.title)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .padding()
+                
                 Text("Well Played You Have reached the end of the quizz !")
                     .font(.body)
                 Text("You're score is \(data.score) / \(data.length)")
                     .font(.body)
+                Button{
+                    data.loading()
+                }label: {
+                    MainButton(text: "Play again !")
+                }
             }
             
         } else {
