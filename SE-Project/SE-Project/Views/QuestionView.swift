@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var data : DataLoader
+    
     var body: some View {
         VStack(spacing: 40) {
             HStack {
@@ -17,34 +19,46 @@ struct QuestionView: View {
                     .foregroundColor(Color("Red"))
                 Spacer()
                 
-                Text("1 out of ...")
+                Text("\(data.index + 1) out of \(data.length)")
                     .fontWeight(.heavy)
                     .foregroundColor(Color("Red"))
             }
-            ProgressBar(widht: 350, height: 20, percent: 66, firstColor: Color("DarkBlue"), secondColor: Color("AccentColor"))
+            ProgressBar(percent: data.progress)
             
-            VStack(alignment: .leading, spacing: 25) {
-                Text("Hello I'm a SIMPLE test example I'm useless...")
+            VStack(alignment: .center, spacing: 25) {
+                Text(data.currentQuestion.questionText)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(Color("AccentColor"))
+                    .fixedSize(horizontal: false, vertical: true)
                 
-                AnswersUI(answer: Answers(id: 0, text: "If you click here you're right !", isCorrect: true))
-                AnswersUI(answer: Answers(id: 0, text: "If you click here you're wrong !", isCorrect: false))
+                if data.currentQuestion.img != nil {
+                    Image(data.currentQuestion.img!)
+                }
+                
+                ForEach(data.currentQuestion.Answers, id: \.id) { anwser in
+                    AnswersUI(answer: anwser)
+                        .environmentObject(data)
+                }
                 
             }
             
-            MainButton(text: "Next question")
+            Button {
+                data.selectQuestion()
+            }label: {
+                MainButton(text: "Next question")
+            }
+            .disabled(!data.answerSelected)
+
             
             Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         //.background(Color("White"))
-        //.navigationBarHidden(true)
-        
-    }
+        }
 }
+            
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {

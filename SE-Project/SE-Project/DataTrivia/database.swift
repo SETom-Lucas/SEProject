@@ -19,7 +19,9 @@ struct Questions : Codable {
 var DefaultQuestion = Questions(questionText: "", img:"Default", Answers: [])
 
 struct Answers : Codable {
-    var id : Int
+    var id : UUID {
+        UUID()
+    }
     var text : String
     var isCorrect :Bool
 

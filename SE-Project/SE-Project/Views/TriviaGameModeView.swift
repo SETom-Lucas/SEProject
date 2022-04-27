@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct TriviaGameModeView: View {
+    @EnvironmentObject var data: DataLoader
     var body: some View {
-        QuestionView()
+        if data.reachedEnd == true {
+            VStack(alignment: .center, spacing: 20){
+                Text("FSTM Triva Game")
+                    .font(.title)
+                Text("Well Played You Have reached the end of the quizz !")
+                    .font(.body)
+                Text("You're score is \(data.score) / \(data.length)")
+                    .font(.body)
+            }
+            
+        } else {
+            ScrollView{
+                QuestionView()
+                    .environmentObject(data)
+        }
     }
 }
 
@@ -17,4 +32,5 @@ struct TriviaGameModeView_Previews: PreviewProvider {
     static var previews: some View {
         TriviaGameModeView()
     }
+}
 }

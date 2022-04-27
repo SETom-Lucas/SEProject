@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 //DataLoader is used to load the the questions in our jason file then parsing them as readable swift code that we can use in the rest of the application.
 
-public class DataLoader {
+public class DataLoader : ObservableObject {
     
     @Published var questionList = [Questions]()
     @Published private(set) var length = 0
@@ -38,8 +38,10 @@ public class DataLoader {
                     var dataFromJson = try jsonDecoder.decode([Questions].self, from: data)
                     dataFromJson.shuffle() //The questions will be in a different order every time the quizz is played
                                            
-                    self.questionList = dataFromJson // Possibility to add a limit to the amount questions in the quizz if we choose
-                    self.length = questionList.count
+                    questionList = dataFromJson // Possibility to add a limit to the amount questions in the quizz if we choose
+                    length = questionList.count
+                    currentQuestion = questionList[index]
+                    currentQuestion.Answers.shuffle()
                     
                 }
                 catch{
@@ -52,14 +54,16 @@ public class DataLoader {
         answerSelected = false
         progress = CGFloat(Double(index + 1) / Double(length) * 350)
         
-        if index < length {
-            currentQuestion = questionList[index]
+        if index + 1 < length {
+            currentQuestion = questionList[index + 1]
+            currentQuestion.Answers.shuffle()
             index = index + 1
             //print(currentQuestion.questionText)
             question = currentQuestion.questionText
             answerChoices = currentQuestion.Answers
         } else {
             reachedEnd = true
+            print (score)
             //print("There are no more questions ! the quizz is over")
             }
     }

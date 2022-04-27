@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnswersUI: View {
+    
+    @EnvironmentObject var data : DataLoader
   
     var answer: Answers
     //Create a state that implement an action when the user select an answer.
@@ -23,6 +25,7 @@ struct AnswersUI: View {
         
             Text(answer.text)
                 .bold()
+                .fixedSize(horizontal: false, vertical: true)
             
             if isSelected {
                 Spacer()
@@ -41,12 +44,16 @@ struct AnswersUI: View {
         .shadow(color: isSelected ? (answer.isCorrect ? green : red) : Color("Grey"), radius: 8, x: 0.5, y: 0.5)
         .onTapGesture {
             isSelected = true
+            if !data.answerSelected {
+                isSelected = true
+                data.selectAnswer(answer: answer)
+            }
         }
     }
 }
 
 struct AnswersUI_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersUI(answer: Answers(id: 0, text: "Hello this is an answer", isCorrect: true))
+        AnswersUI(answer: Answers(text: "Hello this is an answer", isCorrect: true))
     }
 }

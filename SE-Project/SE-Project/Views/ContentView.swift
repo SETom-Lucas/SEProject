@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var data = DataLoader();
     var body: some View {
         NavigationView {
-            //let data = DataLoader();
             ZStack {
                 Color("AccentColor")
                     .ignoresSafeArea()
@@ -30,6 +30,7 @@ struct ContentView: View {
                     
                     NavigationLink{
                         TriviaGameModeView()
+                            .environmentObject(data)
                     }label: {
                         MainButton(text:"Press to continue")
                     }
