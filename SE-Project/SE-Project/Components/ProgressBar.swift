@@ -37,6 +37,6 @@ struct ProgressBar: View {
 struct ProgressBar_Previews: PreviewProvider {
     static var previews: some View {
         ProgressBar(percent: 50)
-            .environmentObject(DataLoader())
+            
     }
 }

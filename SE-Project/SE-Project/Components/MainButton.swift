@@ -26,8 +26,6 @@ struct MainButton: View {
 struct MainButton_Previews: PreviewProvider {
     static var previews: some View {
         MainButton(text: "Press to continue")
-            .environmentObject(DataLoader())
     }
-    
 }
 

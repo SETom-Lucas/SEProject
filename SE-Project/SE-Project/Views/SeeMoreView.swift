@@ -110,6 +110,6 @@ struct SeeMoreView: View {
 struct SeeMoreView_Previews: PreviewProvider {
     static var previews: some View {
         SeeMoreView()
-            .environmentObject(DataLoader())
+            
     }
 }
