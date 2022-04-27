@@ -55,5 +55,6 @@ struct AnswersUI: View {
 struct AnswersUI_Previews: PreviewProvider {
     static var previews: some View {
         AnswersUI(answer: Answers(text: "Hello this is an answer", isCorrect: true))
+            .environmentObject(DataLoader())
     }
 }

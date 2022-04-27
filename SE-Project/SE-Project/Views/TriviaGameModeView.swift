@@ -10,22 +10,42 @@ import SwiftUI
 struct TriviaGameModeView: View {
     @EnvironmentObject var data: DataLoader
     var body: some View {
+        
         if data.reachedEnd == true {
-            VStack(alignment: .center, spacing: 20){
-                Text("FSTM Triva Game")
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .padding()
+            
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.white,Color("AccentColor")]), startPoint: .topLeading, endPoint: .bottomLeading)
+                    .ignoresSafeArea(.all, edges: .all)
                 
-                Text("Well Played You Have reached the end of the quizz !")
-                    .font(.body)
-                Text("You're score is \(data.score) / \(data.length)")
-                    .font(.body)
-                Button{
-                    data.loading()
-                }label: {
-                    MainButton(text: "Play again !")
+                VStack(alignment: .center, spacing: 15){
+                    
+                    Text("FSTM Triva Game")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Text("Well Played You Have reached the end of the quizz !")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Text("You're score is \(data.score) / \(data.length)")
+                        .font(.body)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Button{
+                        data.loading()
+                    }label: {
+                        MainButton(text: "Play again !")
+                    }
                 }
             }
             
@@ -40,6 +60,7 @@ struct TriviaGameModeView: View {
 struct TriviaGameModeView_Previews: PreviewProvider {
     static var previews: some View {
         TriviaGameModeView()
+            .environmentObject(DataLoader())
     }
 }
 }
