@@ -42,12 +42,12 @@ struct AnswersUI: View {
         .cornerRadius(25)
         //Changing the color of the shadows when the answer is true/false.
         .shadow(color: isSelected ? (answer.isCorrect ? green : red) : Color("Grey"), radius: 8, x: 0.5, y: 0.5)
-        .onTapGesture {
-            isSelected = true
-            if !data.answerSelected {
-                isSelected = true
+        .onTapGesture(count: 1) {
+//            isSelected = true
+//            if !data.answerSelected {
+//                isSelected = true
                 data.selectAnswer(answer: answer)
-            }
+            //}
         }
     }
 }

@@ -27,6 +27,5 @@ struct SeeMoreButton: View {
 struct SeeMoreButton_Previews: PreviewProvider {
     static var previews: some View {
         SeeMoreButton(text:Text(Image(systemName: "book.fill")) + Text(" See More"))
-            .environmentObject(DataLoader())
     }
 }
