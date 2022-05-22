@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MainButton: View {
-    var text : String
+    var text : Text
     var background: Color = Color("AccentColor")
     
     var body: some View {
-        Text(text)
+        text
             .foregroundColor(.white)
             .padding()
             .padding(.horizontal)
@@ -25,7 +25,7 @@ struct MainButton: View {
 
 struct MainButton_Previews: PreviewProvider {
     static var previews: some View {
-        MainButton(text: "Press to continue")
+        MainButton(text:Text("Press to continue"))
     }
 }
 

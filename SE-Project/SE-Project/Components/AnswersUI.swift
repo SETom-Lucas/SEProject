@@ -13,7 +13,7 @@ struct AnswersUI: View {
   
     var answer: Answers
     //Create a state that implement an action when the user select an answer.
-    @State private var isSelected = false
+    @State var isSelected = false
     var green = Color(hue: 0.3417, saturation: 0.9, brightness: 0.8)
     var red = Color(hue: 0, saturation: 0.94, brightness: 0.89)
     
@@ -27,7 +27,7 @@ struct AnswersUI: View {
                 .bold()
                 .fixedSize(horizontal: false, vertical: true)
             
-            if isSelected {
+            if self.isSelected {
                 Spacer()
                 
                 Image(systemName: answer.isCorrect ? "checkmark.seal.fill" : "xmark.seal.fill")
@@ -37,24 +37,35 @@ struct AnswersUI: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         //Changing the color of the others answers when the user select an answer.
-        .foregroundColor(isSelected ? Color("AccentColor") : Color("Grey"))
+        .foregroundColor(data.answerSelected ? (isSelected ? Color("AccentColor") : Color("Grey")) : Color("AccentColor"))
+
+      //  .foregroundColor(isSelected ? Color("AccentColor") : Color("Grey"))
         .background(.white)
         .cornerRadius(25)
         //Changing the color of the shadows when the answer is true/false.
-        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : Color("Grey"), radius: 8, x: 0.5, y: 0.5)
-        .onTapGesture(count: 1) {
-//            isSelected = true
-//            if !data.answerSelected {
-//                isSelected = true
+        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray, radius: 8, x: 0.5, y: 0.5)
+
+        
+        
+        
+        .onTapGesture() {
+            
+            if !data.answerSelected {
+               // self.isSelected = true
                 data.selectAnswer(answer: answer)
-            //}
+                print("is selected :" , isSelected)
+                print("is correct :" , answer.isCorrect)
+                print("is data selected", data.answerSelected )
+            }
+            self.isSelected = true
+           
         }
     }
 }
 
 struct AnswersUI_Previews: PreviewProvider {
     static var previews: some View {
-        AnswersUI(answer: Answers(text: "Hello this is an answer", isCorrect: true))
+        AnswersUI(answer: Answers(text: "Hello this is an answer", isCorrect: false))
             .environmentObject(DataLoader())
     }
 }

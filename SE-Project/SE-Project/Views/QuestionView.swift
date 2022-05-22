@@ -31,13 +31,15 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(Color("AccentColor"))
                     .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 
                 if data.currentQuestion.img != nil {
                     Image(data.currentQuestion.img!)
                 }
                 
-                ForEach(data.currentQuestion.Answers, id: \.id) { anwser in
-                    AnswersUI(answer: anwser)
+                ForEach(data.currentQuestion.Answers, id: \.id) { answer in
+                    AnswersUI(answer: answer)
                         .environmentObject(data)
                 }
                 
@@ -46,7 +48,7 @@ struct QuestionView: View {
             Button {
                 data.selectQuestion()
             }label: {
-                MainButton(text: "Next question")
+                MainButton(text:Text( "Next question"), background: data.answerSelected ? Color("AccentColor") :Color("Grey"))
             }
             .disabled(!data.answerSelected)
 

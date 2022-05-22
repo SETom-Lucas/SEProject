@@ -44,7 +44,7 @@ struct TriviaGameModeView: View {
                     Button{
                         data.loading()
                     }label: {
-                        MainButton(text: "Play again !")
+                        MainButton(text:Text("Play Again"))
                     }
                 }
             }
