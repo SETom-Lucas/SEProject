@@ -43,6 +43,11 @@ public class DataLoader : ObservableObject {
                     currentQuestion = questionList[index]
                     currentQuestion.Answers.shuffle()
                     
+                    self.index = 0
+                    self.score = 0
+                    self.progress = 0.00
+                    self.reachedEnd = false
+                    
                 }
                 catch{
                     print(error)

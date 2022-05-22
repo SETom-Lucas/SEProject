@@ -32,7 +32,15 @@ struct ContentView: View {
                         TriviaGameModeView()
                             .environmentObject(data)
                     }label: {
-                        MainButton(text:"Press to continue")
+                        MainButton(text:Text(Image(systemName: "gamecontroller.fill")) + Text(" Trivia Game"))
+                    }
+                    .navigationTitle("Main menu")
+                    .navigationBarHidden(true)
+                    
+                    NavigationLink{
+                        HangmanView()
+                    }label: {
+                        MainButton(text:Text(Image(systemName: "figure.wave")) + Text(" Hangman"))
                     }
 
                     NavigationLink{
@@ -40,6 +48,7 @@ struct ContentView: View {
                     }label: {
                         SeeMoreButton(text:Text(Image(systemName: "book.fill")) + Text(" See More"))
                     }
+
                 }
             }
             
@@ -53,5 +62,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(DataLoader())
     }
 }
