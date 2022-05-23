@@ -27,7 +27,7 @@ struct AnswersUI: View {
                 .bold()
                 .fixedSize(horizontal: false, vertical: true)
             
-            if self.isSelected {
+            if data.answerSelected {
                 Spacer()
                 
                 Image(systemName: answer.isCorrect ? "checkmark.seal.fill" : "xmark.seal.fill")
@@ -43,7 +43,7 @@ struct AnswersUI: View {
         .background(.white)
         .cornerRadius(25)
         //Changing the color of the shadows when the answer is true/false.
-        .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray, radius: 8, x: 0.5, y: 0.5)
+        .shadow(color: data.answerSelected ? (answer.isCorrect ? green : red) : .gray, radius: 8, x: 0.5, y: 0.5)
 
         
         
@@ -51,13 +51,13 @@ struct AnswersUI: View {
         .onTapGesture() {
             
             if !data.answerSelected {
-               // self.isSelected = true
+                isSelected.toggle()
                 data.selectAnswer(answer: answer)
                 print("is selected :" , isSelected)
                 print("is correct :" , answer.isCorrect)
                 print("is data selected", data.answerSelected )
             }
-            self.isSelected = true
+           // self.isSelected = true
            
         }
     }
