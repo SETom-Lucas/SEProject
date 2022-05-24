@@ -8,11 +8,43 @@
 import SwiftUI
 
 struct HangmanView: View {
-    var buttonClicked = false
+    @State var buttonClicked = false
+    @State var shouldHide = false
+
     var color = "AccentColor"
         var body: some View {
-            VStack (spacing : 50){
+            VStack (spacing : 40){
+                    HStack{
+                        Text("HANGMAN GAME")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .foregroundColor(Color("Red"))
+                            .underline()
+                    }
+              
+                HStack{
+                    Text("Score : 2")
+                        .foregroundColor(Color("Red"))
+                        .fontWeight(.bold)
+                        .padding()
+                        
+                    Spacer()
+                    
+                    Text("Wrong Letters : 10")
+                        .foregroundColor(Color("Red"))
+                        .fontWeight(.bold)
+                        .padding()
+                       
+                    }
+                VStack{
+                    //here we need to change the Letter
+                    Text("-----------")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("AccentColor"))
+                        
+                }
                 VStack(spacing : 20) {
+                    //Here we need to change the image
                     HStack(spacing : 0){
                         Image("hangman10")
                         .resizable()
@@ -22,23 +54,54 @@ struct HangmanView: View {
                 }
                 VStack {
                     HStack(spacing : 15){
-                        Button {
-                            print("A")
-                            
-                            }label: {
-                            Image("a.square.fill")
-                                .resizable()
-                                .frame(width: 50.0, height: 50.0)
-                                .foregroundColor(Color("AccentColor"))
+              
+                        if buttonClicked == false {
+                            Button {
+                                print("A")
+                                buttonClicked = true
+                                }label: {
+                                Image("a.square.fill")
+                                    .resizable()
+                                    .frame(width: 50.0, height: 50.0)
+                                    .foregroundColor(Color("AccentColor"))
+                            }
                         }
-                        Button {
-                            print("B")
-                            
-                            }label: {
-                            Image("b.square.fill")
-                                .resizable()
-                                .frame(width: 50.0, height: 50.0)
-                                .foregroundColor(Color("AccentColor"))
+                        if buttonClicked {
+                            Button {
+                                buttonClicked = false
+                                }label: {
+                                Image("a.square.fill")
+                                    .resizable()
+                                    .frame(width: 50.0, height: 50.0)
+                                    .foregroundColor(Color("Grey"))
+                                    .opacity(0.3)
+
+                            }
+                                .disabled(true)
+                        }
+                        if buttonClicked == false {
+                            Button {
+                                print("B")
+                                buttonClicked = true
+                                }label: {
+                                Image("b.square.fill")
+                                    .resizable()
+                                    .frame(width: 50.0, height: 50.0)
+                                    .foregroundColor(Color("AccentColor"))
+                                }
+                        }
+                        if buttonClicked {
+                            Button {
+                                buttonClicked = false
+                                }label: {
+                                Image("b.square.fill")
+                                    .resizable()
+                                    .frame(width: 50.0, height: 50.0)
+                                    .foregroundColor(Color("Grey"))
+                                    .opacity(0.3)
+                                    
+                            }
+                                .disabled(true)
                         }
                         Button {
                             print("C")
