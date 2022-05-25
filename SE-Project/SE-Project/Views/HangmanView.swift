@@ -69,9 +69,8 @@ struct HangmanView: View {
     var color = "AccentColor"
     @StateObject var hangman = Hangman()
         var body: some View {
-            
-            
-            VStack (spacing : 40){
+            VStack (spacing : 20){
+
                     HStack{
                         Text("HANGMAN GAME")
                             .font(.title)
