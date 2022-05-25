@@ -1,6 +1,6 @@
 [
     {
-        "questionText":"Who is the Head porfessor in the Binfo course?",
+        "questionText":"Who is the Head professor in the Binfo course?",
         "img":"VolkerMuller",
         "Answers":[
             {
@@ -18,7 +18,7 @@
 
             },
             {
-                "text":"Christophe shommer",
+                "text":"Christophe Shommer",
                 "isCorrect":false
 
             }
@@ -109,7 +109,7 @@
 
           },
           {
-              "text":"Christophe Scholmer",
+              "text":"Christophe Schommer",
               "isCorrect":false
 
           },
@@ -119,5 +119,148 @@
 
           }
       ]
-    }
+    },
+    {"questionText":"How many student are studying at the FSTM ?",
+    "Answers":[
+        {
+            "text":"Over 2000",
+            "isCorrect":true
+            },
+        {
+            "text":"less than 100",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Over 4000",
+            "isCorrect":false
+
+        },
+        {
+            "text":"less than 500 ",
+            "isCorrect":false
+
+        }
+      ]
+    },
+    {"questionText":"How many bachelors do whe have at the FSTM ?",
+    "Answers":[
+        {
+            "text":"8",
+            "isCorrect":true
+            },
+        {
+            "text":"5",
+            "isCorrect":false
+
+        },
+        {
+            "text":"10",
+            "isCorrect":false
+
+        },
+        {
+            "text":"4",
+            "isCorrect":false
+
+        }
+      ]
+    },
+    {"questionText":"How masters do we have at the FSTM ?",
+    "Answers":[
+        {
+            "text":"18",
+            "isCorrect":true
+            },
+        {
+            "text":"10",
+            "isCorrect":false
+
+        },
+        {
+            "text":"7",
+            "isCorrect":false
+
+        },
+        {
+            "text":"15",
+            "isCorrect":false
+
+        }
+      ]
+    },
+    {"questionText":"How many departments do we have at the FSTM ?",
+    "Answers":[
+        {
+            "text":"5",
+            "isCorrect":true
+            },
+        {
+            "text":"10",
+            "isCorrect":false
+
+        },
+        {
+            "text":"6",
+            "isCorrect":false
+
+        },
+        {
+            "text":"3",
+            "isCorrect":false
+
+        }
+      ]
+    },
+    {
+    "questionText":"Who is the Head professor in the BMATH course?",
+    "img":"IvanNourdin",
+    "Answers":[
+        {
+            "text":"Ivan Nourdin",
+            "isCorrect":true
+            },
+        {
+            "text":"Gabor Wiese",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Stéphane Pallage",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Volker Muller",
+            "isCorrect":false
+
+        }
+    ]
+    },
+    {
+    "questionText":"Who is the Head professor in the     Master in Mathematics course?",
+    "img":"GaborWiese",
+    "Answers":[
+        {
+            "text":"Gabor Wiese",
+            "isCorrect":true
+            },
+        {
+            "text":"Stéphanie Marbehant",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Stéphane Pallage",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Volker Muller",
+            "isCorrect":false
+
+        }
+    ]
+},
+
 ]
