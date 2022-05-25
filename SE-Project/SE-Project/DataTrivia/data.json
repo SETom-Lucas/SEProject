@@ -262,5 +262,71 @@
         }
     ]
 },
+    {
+    "questionText":"Who is the dean of the FSTM ?",
+    "img":"JeanMarcSchlenker",
+    "Answers":[
+        {
+            "text":"Jean-Marc Schlenker",
+            "isCorrect":true
+            },
+        {
+            "text":"Francesco Viti",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Pascal Bouvry",
+            "isCorrect":false
+
+        },
+        {
+            "text":"Franck Leprevost",
+            "isCorrect":false
+
+        }
+    ]
+},
+        {
+        "questionText":"SNT is part of the FSTM ?",
+        "img":"SNT",
+        "Answers":[
+            {
+                "text":"True",
+                "isCorrect":true
+                },
+            {
+                "text":"False",
+                "isCorrect":false
+            }
+        ]
+    },
+        {
+        "questionText":" Math Forge aims to provide an additional means of support in mathematics for uni.lu students of all disciplines ?",
+        "Answers":[
+            {
+                "text":"True",
+                "isCorrect":true
+                },
+            {
+                "text":"False",
+                "isCorrect":false
+            }
+        ]
+    },
+        {
+        "questionText":" Does Prof. Dr. Sergei Merkulov speaks Swedish ?",
+        "img":"SergeiMerkulov",
+        "Answers":[
+            {
+                "text":"True",
+                "isCorrect":true
+                },
+            {
+                "text":"False",
+                "isCorrect":false
+            }
+        ]
+    },
 
 ]
