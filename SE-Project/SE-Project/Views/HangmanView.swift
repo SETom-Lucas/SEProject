@@ -35,9 +35,42 @@ struct HangmanView: View {
     @State var buttonYClicked = false
     @State var buttonZClicked = false
 
+    func resetButtons() {
+        buttonAClicked = false
+        buttonBClicked = false
+        buttonCClicked = false
+        buttonDClicked = false
+        buttonEClicked = false
+        buttonFClicked = false
+        buttonGClicked = false
+        buttonHClicked = false
+        buttonIClicked = false
+        buttonJClicked = false
+        buttonKClicked = false
+        buttonLClicked = false
+        buttonMClicked = false
+        buttonNClicked = false
+        buttonOClicked = false
+        buttonPClicked = false
+        buttonQClicked = false
+        buttonRClicked = false
+        buttonSClicked = false
+        buttonTClicked = false
+        buttonUClicked = false
+        buttonVClicked = false
+        buttonWClicked = false
+        buttonXClicked = false
+        buttonYClicked = false
+        buttonZClicked = false
+    }
+    
+   
+    
     var color = "AccentColor"
+    @StateObject var hangman = Hangman()
         var body: some View {
             VStack (spacing : 20){
+
                     HStack{
                         Text("HANGMAN GAME")
                             .font(.title)
@@ -45,9 +78,10 @@ struct HangmanView: View {
                             .foregroundColor(Color("Red"))
                             .underline()
                     }
+                    
               
                 HStack{
-                    Text("Score : 2")
+                    Text("Score : \(hangman.score)")
                         .foregroundColor(Color("Red"))
                         .fontWeight(.bold)
                         .padding()
@@ -60,9 +94,11 @@ struct HangmanView: View {
                         .padding()
                        
                     }
+                
                 VStack{
-                    //here we need to change the Letter
-                    Text("-----------")
+                    
+                   
+                    Text(hangman.wordDisplay)
                         .fontWeight(.bold)
                         .foregroundColor(Color("AccentColor"))
                         
@@ -70,7 +106,7 @@ struct HangmanView: View {
                 VStack(spacing : 20) {
                     //Here we need to change the image
                     HStack(spacing : 0){
-                        Image("hangman10")
+                        Image(hangman.currentImage)
                         .resizable()
                         .frame(width: 200.0, height: 200.0)
                         .background(Color("AccentColor"))
@@ -80,7 +116,8 @@ struct HangmanView: View {
                     HStack(spacing : 15){
                         if buttonAClicked == false {
                             Button {
-                                print("A")
+                                hangman.hangmanGame(playerGuess: "a")
+                                hangman.convertToString()
                                 buttonAClicked = true
                                 }label: {
                                 Image("a.square.fill")
@@ -102,7 +139,8 @@ struct HangmanView: View {
                         }
                         if buttonBClicked == false {
                             Button {
-                                print("B")
+                                hangman.hangmanGame(playerGuess: "b")
+                                hangman.convertToString()
                                 buttonBClicked = true
                                 }label: {
                                 Image("b.square.fill")
@@ -124,7 +162,8 @@ struct HangmanView: View {
                         }
                         if buttonCClicked == false {
                             Button {
-                                print("C")
+                                hangman.hangmanGame(playerGuess: "c")
+                                hangman.convertToString()
                                 buttonCClicked = true
                                 }label: {
                                 Image("c.square.fill")
@@ -147,7 +186,8 @@ struct HangmanView: View {
                         }
                         if buttonDClicked == false {
                             Button {
-                                print("D")
+                                hangman.hangmanGame(playerGuess: "d")
+                                hangman.convertToString()
                                 buttonDClicked = true
                                 }label: {
                                 Image("d.square.fill")
@@ -170,7 +210,8 @@ struct HangmanView: View {
                         }
                         if buttonEClicked == false {
                             Button {
-                                print("E")
+                                hangman.hangmanGame(playerGuess: "e")
+                                hangman.convertToString()
                                 buttonEClicked = true
                                 }label: {
                                 Image("e.square.fill")
@@ -193,7 +234,8 @@ struct HangmanView: View {
                         }
                         if buttonFClicked == false {
                             Button {
-                                print("F")
+                                hangman.hangmanGame(playerGuess: "f")
+                                hangman.convertToString()
                                 buttonFClicked = true
                                 }label: {
                                 Image("f.square.fill")
@@ -219,7 +261,8 @@ struct HangmanView: View {
                     HStack(spacing : 15){
                         if buttonGClicked == false {
                             Button {
-                                print("G")
+                                hangman.hangmanGame(playerGuess: "g")
+                                hangman.convertToString()
                                 buttonGClicked = true
                                 }label: {
                                 Image("g.square.fill")
@@ -242,7 +285,8 @@ struct HangmanView: View {
                         }
                         if buttonHClicked == false {
                             Button {
-                                print("H")
+                                hangman.hangmanGame(playerGuess: "h")
+                                hangman.convertToString()
                                 buttonHClicked = true
                                 }label: {
                                 Image("h.square.fill")
@@ -265,7 +309,8 @@ struct HangmanView: View {
                         }
                         if buttonIClicked == false {
                             Button {
-                                print("I")
+                                hangman.hangmanGame(playerGuess: "i")
+                                hangman.convertToString()
                                 buttonIClicked = true
                                 }label: {
                                 Image("i.square.fill")
@@ -288,7 +333,8 @@ struct HangmanView: View {
                         }
                         if buttonJClicked == false {
                             Button {
-                                print("J")
+                                hangman.hangmanGame(playerGuess: "j")
+                                hangman.convertToString()
                                 buttonJClicked = true
                                 }label: {
                                 Image("j.square.fill")
@@ -311,7 +357,8 @@ struct HangmanView: View {
                         }
                         if buttonKClicked == false {
                             Button {
-                                print("K")
+                                hangman.hangmanGame(playerGuess: "k")
+                                hangman.convertToString()
                                 buttonKClicked = true
                                 }label: {
                                 Image("k.square.fill")
@@ -334,7 +381,8 @@ struct HangmanView: View {
                         }
                         if buttonLClicked == false {
                             Button {
-                                print("L")
+                                hangman.hangmanGame(playerGuess: "l")
+                                hangman.convertToString()
                                 buttonLClicked = true
                                 }label: {
                                 Image("l.square.fill")
@@ -360,7 +408,8 @@ struct HangmanView: View {
 
                             if buttonMClicked == false {
                                 Button {
-                                    print("M")
+                                    hangman.hangmanGame(playerGuess: "m")
+                                    hangman.convertToString()
                                     buttonMClicked = true
                                     }label: {
                                     Image("m.square.fill")
@@ -383,7 +432,8 @@ struct HangmanView: View {
                             }
                             if buttonNClicked == false {
                                 Button {
-                                    print("N")
+                                    hangman.hangmanGame(playerGuess: "n")
+                                    hangman.convertToString()
                                     buttonNClicked = true
                                     }label: {
                                     Image("n.square.fill")
@@ -406,7 +456,8 @@ struct HangmanView: View {
                             }
                             if buttonOClicked == false {
                                 Button {
-                                    print("O")
+                                    hangman.hangmanGame(playerGuess: "o")
+                                    hangman.convertToString()
                                     buttonOClicked = true
                                     }label: {
                                     Image("o.square.fill")
@@ -429,7 +480,8 @@ struct HangmanView: View {
                             }
                             if buttonPClicked == false {
                                 Button {
-                                    print("P")
+                                    hangman.hangmanGame(playerGuess: "p")
+                                    hangman.convertToString()
                                     buttonPClicked = true
                                     }label: {
                                     Image("p.square.fill")
@@ -452,7 +504,8 @@ struct HangmanView: View {
                             }
                             if buttonQClicked == false {
                                 Button {
-                                    print("Q")
+                                    hangman.hangmanGame(playerGuess: "q")
+                                    hangman.convertToString()
                                     buttonQClicked = true
                                     }label: {
                                     Image("q.square.fill")
@@ -475,7 +528,8 @@ struct HangmanView: View {
                             }
                             if buttonRClicked == false {
                                 Button {
-                                    print("R")
+                                    hangman.hangmanGame(playerGuess: "r")
+                                    hangman.convertToString()
                                     buttonRClicked = true
                                     }label: {
                                     Image("r.square.fill")
@@ -500,7 +554,8 @@ struct HangmanView: View {
                         HStack(spacing : 15){
                             if buttonSClicked == false {
                                 Button {
-                                    print("S")
+                                    hangman.hangmanGame(playerGuess: "s")
+                                    hangman.convertToString()
                                     buttonSClicked = true
                                     }label: {
                                     Image("s.square.fill")
@@ -523,7 +578,8 @@ struct HangmanView: View {
                             }
                             if buttonTClicked == false {
                                 Button {
-                                    print("T")
+                                    hangman.hangmanGame(playerGuess: "t")
+                                    hangman.convertToString()
                                     buttonTClicked = true
                                     }label: {
                                     Image("t.square.fill")
@@ -546,7 +602,8 @@ struct HangmanView: View {
                             }
                             if buttonUClicked == false {
                                 Button {
-                                    print("U")
+                                    hangman.hangmanGame(playerGuess: "u")
+                                    hangman.convertToString()
                                     buttonUClicked = true
                                     }label: {
                                     Image("u.square.fill")
@@ -569,7 +626,8 @@ struct HangmanView: View {
                             }
                             if buttonVClicked == false {
                                 Button {
-                                    print("V")
+                                    hangman.hangmanGame(playerGuess: "v")
+                                    hangman.convertToString()
                                     buttonVClicked = true
                                     }label: {
                                     Image("v.square.fill")
@@ -592,7 +650,8 @@ struct HangmanView: View {
                             }
                             if buttonWClicked == false {
                                 Button {
-                                    print("W")
+                                    hangman.hangmanGame(playerGuess: "w")
+                                    hangman.convertToString()
                                     buttonWClicked = true
                                     }label: {
                                     Image("w.square.fill")
@@ -615,7 +674,8 @@ struct HangmanView: View {
                             }
                             if buttonXClicked == false {
                                 Button {
-                                    print("X")
+                                    hangman.hangmanGame(playerGuess: "x")
+                                    hangman.convertToString()
                                     buttonXClicked = true
                                     }label: {
                                     Image("x.square.fill")
@@ -640,8 +700,8 @@ struct HangmanView: View {
                     HStack(spacing : 15){
                         if buttonYClicked == false {
                             Button {
-                                print("Y")
-                                buttonYClicked = true
+                                hangman.hangmanGame(playerGuess: "y")
+                                hangman.convertToString()
                                 }label: {
                                 Image("y.square.fill")
                                     .resizable()
@@ -663,7 +723,8 @@ struct HangmanView: View {
                         }
                         if buttonZClicked == false {
                             Button {
-                                print("Z")
+                                hangman.hangmanGame(playerGuess: "z")
+                                hangman.convertToString()
                                 buttonZClicked = true
                                 }label: {
                                 Image("z.square.fill")
@@ -683,17 +744,18 @@ struct HangmanView: View {
 
                             }
                                 .disabled(true)
-
                         }
                     }
                 }
             }
         }
-    }
+}
+
 
 
 struct HangmanView_Previews: PreviewProvider {
     static var previews: some View {
         HangmanView()
+            .environmentObject(Hangman())
     }
 }
