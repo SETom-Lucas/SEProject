@@ -12,19 +12,41 @@ public class Hangman : ObservableObject {
     @Published var word = ""
     @Published var wordDisplayArray : [Character] = []
     @Published var wordDisplay = ""
+    @Published var imageList = ["hangman0", "hangman1", "hangman2", "hangman3", "hangman4", "hangman5", "hangman6", "hangman7", "hangman8", "hangman9", "hangman10"]
+    @Published var currentImage = ""
+    @Published var wordList = ["volkermuller", "binfo", "fstm", "rothkugel", "medicine", "science", "faculty", ""]
+    @Published var score = 0
+    
+    var readyNext = false
+    var tries = 0
+    var currentWord = 0
 
     init () {
-        chooseWord()
+        chooseWord(int : currentWord)
         convertToString()
     }
     
-    func chooseWord(){
-        word = "hangman"
+    func chooseWord(int : Int){
+        word = wordList[int]
+        print(word)
+        wordDisplay = ""
+        wordDisplayArray = []
         for _ in 0 ... word.count - 1{
             wordDisplayArray.append("_")
         }
+        currentImage = imageList [0]
     }
-
+    
+    func chooseNextWord (){
+        tries = 0
+        if currentWord < wordList.count - 1 {
+            currentWord += 1
+            chooseWord(int: currentWord)
+        } else {
+            
+        }
+    }
+    
     func convertToString(){
         wordDisplay = ""
         for i in wordDisplayArray{
@@ -39,9 +61,8 @@ public class Hangman : ObservableObject {
 
 
         let wordArray = Array(word)
-        var guessed = false
         var guessedLetters : [Character] = []
-        var tries = 6
+        
 
 
         print("Welcome to the Hangman game!")
@@ -69,18 +90,22 @@ public class Hangman : ObservableObject {
             if numberOfRecurrence == 0 {
                 print("This letter is not in the word")
                 numberOfRecurrence -= 1
+                tries += 1
+                currentImage = imageList[tries]
             }
                 
             if wordArray == wordDisplayArray {
-                guessed = true
+                score += 1
+                readyNext = true
+                chooseNextWord()
+                
                 }
-            if tries == 0 {
-                print ("You loose")
-                exit(0)
+                
+            if tries == 10 {
+                readyNext = true
             }
         }
     }
-
 }
 
 

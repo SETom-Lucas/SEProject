@@ -35,13 +35,42 @@ struct HangmanView: View {
     @State var buttonYClicked = false
     @State var buttonZClicked = false
 
+    func resetButtons() {
+        buttonAClicked = false
+        buttonBClicked = false
+        buttonCClicked = false
+        buttonDClicked = false
+        buttonEClicked = false
+        buttonFClicked = false
+        buttonGClicked = false
+        buttonHClicked = false
+        buttonIClicked = false
+        buttonJClicked = false
+        buttonKClicked = false
+        buttonLClicked = false
+        buttonMClicked = false
+        buttonNClicked = false
+        buttonOClicked = false
+        buttonPClicked = false
+        buttonQClicked = false
+        buttonRClicked = false
+        buttonSClicked = false
+        buttonTClicked = false
+        buttonUClicked = false
+        buttonVClicked = false
+        buttonWClicked = false
+        buttonXClicked = false
+        buttonYClicked = false
+        buttonZClicked = false
+    }
+    
+   
     
     var color = "AccentColor"
     @StateObject var hangman = Hangman()
-
-
         var body: some View {
-
+            
+            
             VStack (spacing : 40){
                     HStack{
                         Text("HANGMAN GAME")
@@ -50,9 +79,10 @@ struct HangmanView: View {
                             .foregroundColor(Color("Red"))
                             .underline()
                     }
+                    
               
                 HStack{
-                    Text("Score : 2")
+                    Text("Score : \(hangman.score)")
                         .foregroundColor(Color("Red"))
                         .fontWeight(.bold)
                         .padding()
@@ -65,8 +95,10 @@ struct HangmanView: View {
                         .padding()
                        
                     }
-               
+                
                 VStack{
+                    
+                   
                     Text(hangman.wordDisplay)
                         .fontWeight(.bold)
                         .foregroundColor(Color("AccentColor"))
@@ -75,7 +107,7 @@ struct HangmanView: View {
                 VStack(spacing : 20) {
                     //Here we need to change the image
                     HStack(spacing : 0){
-                        Image("hangman10")
+                        Image(hangman.currentImage)
                         .resizable()
                         .frame(width: 200.0, height: 200.0)
                         .background(Color("AccentColor"))
@@ -179,7 +211,7 @@ struct HangmanView: View {
                         }
                         if buttonEClicked == false {
                             Button {
-                                hangman.hangmanGame(playerGuess: "d")
+                                hangman.hangmanGame(playerGuess: "e")
                                 hangman.convertToString()
                                 buttonEClicked = true
                                 }label: {
@@ -713,13 +745,13 @@ struct HangmanView: View {
 
                             }
                                 .disabled(true)
-
                         }
                     }
                 }
             }
         }
-    }
+}
+
 
 
 struct HangmanView_Previews: PreviewProvider {
