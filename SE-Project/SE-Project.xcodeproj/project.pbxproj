@@ -17,6 +17,7 @@
 		CA2F8EB827E90C8400CC2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2F8EB727E90C8400CC2399 /* Assets.xcassets */; };
 		CA2F8EBB27E90C8400CC2399 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2F8EBA27E90C8400CC2399 /* Preview Assets.xcassets */; };
 		CA2F8EE127E917F400CC2399 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F8EE027E917F400CC2399 /* MainButton.swift */; };
+		CA432D1E284552850010D841 /* HangmanScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA432D1D284552850010D841 /* HangmanScoreView.swift */; };
 		CA679496284504C9007F497A /* HangmanDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = CA679495284504C9007F497A /* HangmanDatabase.json */; };
 		CACD1C0D283A2EFB00CB96D4 /* HangmanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACD1C0C283A2EFB00CB96D4 /* HangmanView.swift */; };
 		CAD01CD527F3A76700586C4F /* SeeMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD01CD427F3A76700586C4F /* SeeMoreButton.swift */; };
@@ -38,6 +39,7 @@
 		CA2F8EB727E90C8400CC2399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA2F8EBA27E90C8400CC2399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CA2F8EE027E917F400CC2399 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		CA432D1D284552850010D841 /* HangmanScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanScoreView.swift; sourceTree = "<group>"; };
 		CA679495284504C9007F497A /* HangmanDatabase.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HangmanDatabase.json; sourceTree = "<group>"; };
 		CACD1C0C283A2EFB00CB96D4 /* HangmanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanView.swift; sourceTree = "<group>"; };
 		CAD01CD427F3A76700586C4F /* SeeMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				CAD59B8B27F3698F00155AEA /* TriviaGameModeView.swift */,
 				CAD01CD727F3B38800586C4F /* SeeMoreView.swift */,
 				CACD1C0C283A2EFB00CB96D4 /* HangmanView.swift */,
+				CA432D1D284552850010D841 /* HangmanScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1B321A27EA871000F81992 /* QuestionView.swift in Sources */,
+				CA432D1E284552850010D841 /* HangmanScoreView.swift in Sources */,
 				CA2F8EB627E90C8400CC2399 /* ContentView.swift in Sources */,
 				CAD01CD527F3A76700586C4F /* SeeMoreButton.swift in Sources */,
 				CA2F8EE127E917F400CC2399 /* MainButton.swift in Sources */,

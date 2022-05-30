@@ -2,21 +2,62 @@
 //  HangmanScoreView.swift
 //  SE-Project
 //
-//  Created by Tom Leonard on 28/05/2022.
+//  Created by Lucas Villiere on 30/05/2022.
 //
 
-//import SwiftUI
-//
-//struct HangmanScoreView: View {
-//    var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-//    }
-//}
-//
-//struct HangmanScoreView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HangmanScoreView()
-//            .environmentObject(Hangman())
-//
-//    }
-//}
+import SwiftUI
+
+struct HangmanScoreView: View {
+    @StateObject var hangman = Hangman()
+    var body: some View {
+
+//        Si c'est la fin du jeu
+//        if {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.white,Color("AccentColor")]), startPoint: .topLeading, endPoint: .bottomLeading)
+                    .ignoresSafeArea(.all, edges: .all)
+                
+                VStack(alignment: .center, spacing: 15){
+                    
+                    Text("HANGMAN GAME")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(Color("Red"))
+                        .padding()
+                    
+                    Text("Well Played You Have reached the end of the game !")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Text("You're score is \(hangman.score) ")
+                        .font(.body)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    
+                    Button{
+                        hangman.loading()
+                    }label: {
+                        MainButton(text:Text("Play Again"))
+                    }
+                }
+            }
+//    Sinon
+//    }else {}
+        
+    
+    }
+}
+
+struct HangmanScoreView_Previews: PreviewProvider {
+    static var previews: some View {
+        HangmanScoreView()
+    }
+}
