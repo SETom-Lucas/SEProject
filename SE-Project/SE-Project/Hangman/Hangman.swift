@@ -28,7 +28,7 @@ public class Hangman : ObservableObject {
     }
     
     func loading () {
-        guard let path = Bundle.main.path(forResource: "HangmanData", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: "HangmanDatabase", ofType: "json") else {
             print ("here")
             return
         }
