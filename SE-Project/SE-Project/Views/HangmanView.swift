@@ -10,6 +10,7 @@ import SwiftUI
 struct HangmanView: View {
     var color = "AccentColor"
     @StateObject var hangman = Hangman()
+    @State var showAlert = false
     
         var body: some View {
             VStack (spacing : 20){
@@ -31,20 +32,37 @@ struct HangmanView: View {
                         
                     Spacer()
                     
-                    Text("Wrong Letters : 10")
+                    Text("Wrong Letters : \(hangman.tries)")
                         .foregroundColor(Color("Red"))
                         .fontWeight(.bold)
                         .padding()
                        
                     }
                 
-                VStack{
-                    
-                   
+                HStack(spacing :15){
                     Text(hangman.wordDisplay)
                         .fontWeight(.bold)
                         .foregroundColor(Color("AccentColor"))
-                        
+                    
+                    Button{
+                        showAlert = true
+                        }label: {
+                        Image("info.circle.fill")
+                            .resizable()
+                            .frame(width: 20.0, height: 20.0)
+                            .foregroundColor(Color("AccentColor"))
+                            
+
+                    }
+            
+                     .alert(isPresented:$showAlert) {
+                         Alert(
+                             title: Text("HINT"),
+                             message: Text("There is no undo"),
+                             dismissButton: .default(Text("Got it!"))
+                         )
+                     }
+
                 }
                 VStack(spacing : 20) {
                     //Here we need to change the image
