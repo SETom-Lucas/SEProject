@@ -30,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		09A66BD128426E92000361DF /* HangmanScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanScoreView.swift; sourceTree = "<group>"; };
-		09A66BD628428F3D000361DF /* HangmanData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = HangmanData.json; path = ../../../../../../../HangmanData.json; sourceTree = "<group>"; };
 		09A66C1D284292FC000361DF /* Hangman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hangman.swift; sourceTree = "<group>"; };
 		09A66C1E284292FC000361DF /* HangmanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanData.swift; sourceTree = "<group>"; };
 		09A66C1F284292FC000361DF /* HangmanData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HangmanData.json; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 				CA2F8EDD27E913E600CC2399 /* Components */,
 				CA1B321627E91E3A00F81992 /* Views */,
 				CA2F8EB727E90C8400CC2399 /* Assets.xcassets */,
-				09A66BD628428F3D000361DF /* HangmanData.json */,
 				CA2F8EB927E90C8400CC2399 /* Preview Content */,
 			);
 			path = "SE-Project";
