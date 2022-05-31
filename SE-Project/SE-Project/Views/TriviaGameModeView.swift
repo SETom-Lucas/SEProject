@@ -25,7 +25,7 @@ struct TriviaGameModeView: View {
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .foregroundColor(Color("Red"))
-                        .opacity(0.98)
+                        .opacity(0.95)
                         .padding()
                     
                     Text("Well Played You Have reached the end of the quizz !")
