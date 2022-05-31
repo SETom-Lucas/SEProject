@@ -13,7 +13,6 @@ struct HangmanView: View {
     @State var showAlert = false
     
         var body: some View {
-            ScrollView(.vertical){
                 if hangman.end {
                     ZStack {
                         LinearGradient(gradient: Gradient(colors: [.white,Color("AccentColor")]), startPoint: .topLeading, endPoint: .bottomLeading)
@@ -56,6 +55,7 @@ struct HangmanView: View {
                         }
                     }
                 } else {
+                    ScrollView(.vertical){
                     VStack (spacing : 20){
                         if hangman.end == true {
                                 
