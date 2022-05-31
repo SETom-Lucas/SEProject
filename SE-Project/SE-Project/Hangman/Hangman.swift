@@ -19,7 +19,7 @@ public class Hangman : ObservableObject {
     @Published var guessedLetters : [Character] = []
     
     
-    var readyNext = false
+    var end = false
     var tries = 0
     var currentWord = 0
     
@@ -42,8 +42,9 @@ public class Hangman : ObservableObject {
                 wordList = dataFromJson
                 chooseWord(int: currentWord)
                 convertToString()
-                
-                
+                end = false
+                score = 0
+                tries = 0
             }
             catch{
                 print(error)
@@ -67,6 +68,7 @@ public class Hangman : ObservableObject {
             currentWord += 1
             chooseWord(int: currentWord)
         } else {
+            end = true
         }
     }
     
@@ -114,7 +116,7 @@ public class Hangman : ObservableObject {
             }
                 
             if tries == 10 {
-                readyNext = true
+                end = true
                 //add exit to victory screen
             }
         }
