@@ -26,6 +26,7 @@ struct HangmanView: View {
                             .multilineTextAlignment(.center)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .foregroundColor(Color("Red"))
+                            .opacity(0.95)
                             .padding()
                         
                         Text("Well Played You Have reached the end of the game !")
@@ -37,7 +38,7 @@ struct HangmanView: View {
                             .padding()
                         
                         Text("You're score is \(hangman.score) ")
-                            .font(.body)
+                            .font(.title2)
                             .frame(maxWidth: .infinity, alignment: .center)
                             .foregroundColor(.white)
                             .padding()
@@ -46,8 +47,11 @@ struct HangmanView: View {
                         Button{
                             hangman.loading()
                         }label: {
-                            MainButton(text:Text("Play Again"))
+                            MainButton(text:Text("Play Again"),background: Color("Red"))
+                                
                         }
+                        
+                        
                     }
                 }
             } else {

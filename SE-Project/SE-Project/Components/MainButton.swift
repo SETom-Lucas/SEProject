@@ -25,7 +25,7 @@ struct MainButton: View {
 
 struct MainButton_Previews: PreviewProvider {
     static var previews: some View {
-        MainButton(text:Text("Press to continue"))
+        MainButton(text:Text("Press to continue"),background: Color("AccentColor"))
     }
 }
 

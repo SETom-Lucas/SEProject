@@ -24,7 +24,8 @@ struct TriviaGameModeView: View {
                         .fontWeight(.heavy)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Red"))
+                        .opacity(0.98)
                         .padding()
                     
                     Text("Well Played You Have reached the end of the quizz !")
@@ -36,7 +37,7 @@ struct TriviaGameModeView: View {
                         .padding()
                     
                     Text("You're score is \(data.score) / \(data.length)")
-                        .font(.body)
+                        .font(.title2)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .foregroundColor(.white)
                         .padding()
@@ -44,7 +45,7 @@ struct TriviaGameModeView: View {
                     Button{
                         data.loading()
                     }label: {
-                        MainButton(text:Text("Play Again"))
+                        MainButton(text:Text("Play Again"),background: Color("Red"))
                     }
                 }
             }
