@@ -6,5 +6,58 @@
     {
         "word" : "volkermuller",
         "hint" : "best professor"
+    },
+    {
+        "word" : "department",
+        "hint" : "The FSTM is made of 5 of these"
+    },
+    {
+        "word" : "professor",
+        "hint" : "There are more then 270 of these in the FSTM"
+    },
+    {
+        "word" : "medicine",
+        "hint" : "the 'M' in FSTM "
+    },
+    {
+        "word" : "science",
+        "hint" : "the 'S' in FSTM "
+    },
+    {
+        "word" : "technology",
+        "hint" : "the 'T' in FSTM "
+    },
+    {
+        "word" : "sergeimerkulov",
+        "hint" : "Professor of Analytical Geometry"
+    },
+    {
+        "word" : "sergehaan",
+        "hint" : "Vice Dean of the FSTM and porfessor in Biological chemestry"
+    },
+
+    {
+        "word" : "giovannipeccati",
+        "hint" : "Head of the department of Mathematics "
+    },
+    {
+        "word" : "irisbehrmann",
+        "hint" : "Head of the Department of Life Sience and medicine"
+    },
+    {
+        "word" : "martintheobald",
+        "hint" : "Strudy director of the Bachelor in Computer Science"
+    },
+    {
+        "word" : "yvesletraon",
+        "hint" : "Study director of the Master in Information Security Managment"
+    },
+    {
+        "word" : "nicolasnavet",
+        "hint" : "Vice Head of Department of Computer science"
+    },
+    {
+        "word" : "stephenleyer",
+        "hint" : "Head of the Engenieering department"
     }
 ]
