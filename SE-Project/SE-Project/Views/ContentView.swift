@@ -11,6 +11,7 @@ struct ContentView: View {
     @StateObject var data = DataLoader();
     var body: some View {
         NavigationView {
+            //Main view when launch the APP.
             ZStack {
                 Color("AccentColor")
                     .ignoresSafeArea()
@@ -28,6 +29,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .padding()
                     
+                    //This button link to the TriviaGame
                     NavigationLink{
                         TriviaGameModeView()
                             .environmentObject(data)
@@ -36,13 +38,13 @@ struct ContentView: View {
                     }
                     .navigationTitle("Main menu")
                     .navigationBarHidden(true)
-                    
+                    //This button link to the HangmanGame
                     NavigationLink{
                         HangmanView()
                     }label: {
                         MainButton(text:Text(Image(systemName: "figure.wave")) + Text(" Hangman"))
                     }
-
+                    //This button link to the SeeMoreView
                     NavigationLink{
                         SeeMoreView()
                     }label: {

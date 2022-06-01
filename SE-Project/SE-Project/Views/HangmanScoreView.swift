@@ -10,9 +10,7 @@ import SwiftUI
 struct HangmanScoreView: View {
     @StateObject var hangman = Hangman()
     var body: some View {
-
-//        Si c'est la fin du jeu
-//        if {
+        //Here we have our score view when we end the HangmanGame
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [.white,Color("AccentColor")]), startPoint: .topLeading, endPoint: .bottomLeading)
                     .ignoresSafeArea(.all, edges: .all)
@@ -49,10 +47,7 @@ struct HangmanScoreView: View {
                     }
                 }
             }
-//    Sinon
-//    }else {}
-        
-    
+
     }
 }
 

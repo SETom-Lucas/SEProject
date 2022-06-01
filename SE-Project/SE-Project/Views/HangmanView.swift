@@ -13,6 +13,7 @@ struct HangmanView: View {
     @State var showAlert = false
     
         var body: some View {
+            //End screen when we loose or if we end the HangmanGame
                 if hangman.end {
                     ZStack {
                         LinearGradient(gradient: Gradient(colors: [.white,Color("AccentColor")]), startPoint: .topLeading, endPoint: .bottomLeading)
@@ -88,7 +89,7 @@ struct HangmanView: View {
                             Text(hangman.wordDisplay)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("AccentColor"))
-                            
+                            //Here we have an alert when we click on informartion button when we want help
                             Button{
                                 showAlert = true
                                 }label: {
@@ -119,6 +120,7 @@ struct HangmanView: View {
                             }
                         }
                         VStack {
+                            //Here we create all buttons
                             HStack(spacing : 15){
                                 if !hangman.guessedLetters.contains("a") {
                                     Button {

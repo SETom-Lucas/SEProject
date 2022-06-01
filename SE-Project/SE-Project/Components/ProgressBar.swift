@@ -17,7 +17,7 @@ struct ProgressBar: View {
     
     
     var body: some View {
-        
+        //Here we just create the progress bar that we'll use later in QuestionView
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: height, style: .continuous)
                 .frame(width: widht, height: height)

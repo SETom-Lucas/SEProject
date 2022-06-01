@@ -25,6 +25,7 @@ struct QuestionView: View {
             }
             ProgressBar(percent: data.progress)
             
+            //Here insert our question from the json file
             VStack(alignment: .center, spacing: 25) {
                 Text(data.currentQuestion.questionText)
                     .font(.system(size: 20))
@@ -34,17 +35,19 @@ struct QuestionView: View {
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, alignment: .center)
                 
+                //Here we check if we have an image in our json file
                 if data.currentQuestion.img != nil {
                     Image(data.currentQuestion.img!)
                 }
                 
+                //Here we insert the possible answers from our json file
                 ForEach(data.currentQuestion.Answers, id: \.id) { answer in
                     AnswersUI(answer: answer)
                         .environmentObject(data)
                 }
                 
             }
-            
+            //Here we have a button to go to the next question
             Button {
                 data.selectQuestion()
             }label: {
@@ -57,7 +60,6 @@ struct QuestionView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        //.background(Color("White"))
         }
 }
             

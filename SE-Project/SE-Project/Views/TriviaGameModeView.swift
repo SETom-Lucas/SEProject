@@ -10,7 +10,7 @@ import SwiftUI
 struct TriviaGameModeView: View {
     @EnvironmentObject var data: DataLoader
     var body: some View {
-        
+        //Final View when we end the TrivaGame
         if data.reachedEnd == true {
             
             ZStack {

@@ -37,9 +37,7 @@ struct AnswersUI: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         //Changing the color of the others answers when the user select an answer.
-        .foregroundColor(data.answerSelected ? (isSelected ? Color("AccentColor") : Color("Grey")) : Color("AccentColor"))
-
-      //  .foregroundColor(isSelected ? Color("AccentColor") : Color("Grey"))
+        .foregroundColor(data.answerSelected ?  Color("Grey") : Color("AccentColor"))
         .background(.white)
         .cornerRadius(25)
         //Changing the color of the shadows when the answer is true/false.
@@ -53,11 +51,7 @@ struct AnswersUI: View {
             if !data.answerSelected {
                 isSelected.toggle()
                 data.selectAnswer(answer: answer)
-                print("is selected :" , isSelected)
-                print("is correct :" , answer.isCorrect)
-                print("is data selected", data.answerSelected )
             }
-           // self.isSelected = true
            
         }
     }
